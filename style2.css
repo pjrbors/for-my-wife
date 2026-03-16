@@ -3,16 +3,34 @@ body {
     margin: 0;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* stack GIF and frames vertically */
     align-items: center;
     background: linear-gradient(135deg, #ffa4bb, #81a6ee);
     font-family: Arial, sans-serif;
 }
 
-/* Grid container */
+/* GIF container as a square box */
+.gif-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;   /* same as frames */
+    height: 150px;  /* same as frames */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* fit inside square without cropping */
+    border-radius: 15px;
+}
+
+/* Grid container for frames */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns on top row */
+    grid-template-columns: 1fr 1fr; /* 2 columns for first row */
     grid-auto-rows: auto;
     gap: 20px;
     width: 90%;
@@ -31,10 +49,36 @@ body {
     background: white;
     border: 2px solid black;
     border-radius: 15px;
-    width: 100%; 
-    height: 150px;
+    width: 150px; /* fixed width same as GIF */
+    height: 150px; /* fixed height same as GIF */
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.frame:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Frame labels */
+.frame-label {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #fff; 
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive: stack frames on very small screens */
+@media (max-width: 350px) {
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
+}    justify-content: center;
     align-items: center;
     font-size: 24px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
