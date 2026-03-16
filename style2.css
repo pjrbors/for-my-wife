@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* GIF container as a square box */
+/* GIF container at top as a square box */
 .gif-container {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -35,6 +35,57 @@ body {
     gap: 20px;
     width: 90%;
     max-width: 400px;
+}
+
+/* Wrapper for frame + label */
+.frame-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Individual frames */
+.frame {
+    background: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 150px; /* fixed width */
+    height: 150px; /* fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.frame:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Icon or GIF inside the frame */
+.frame-icon {
+    width: 100%;   /* fill frame width */
+    height: 100%;  /* fill frame height */
+    object-fit: contain; /* maintain aspect ratio, no cropping */
+    border-radius: 15px; /* optional, match frame corners */
+}
+
+/* Frame labels */
+.frame-label {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #fff; 
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive: stack frames on very small screens */
+@media (max-width: 350px) {
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
+}    max-width: 400px;
 }
 
 /* Wrapper for frame + label */
