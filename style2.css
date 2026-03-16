@@ -1,6 +1,63 @@
-/* Body & background only */
+/* Mobile-friendly body & background */
 body {
     margin: 0;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(135deg, #ffa4bb, #81a6ee);
+    font-family: Arial, sans-serif;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns on top row */
+    grid-auto-rows: auto;
+    gap: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Wrapper for frame + label */
+.frame-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Individual frames */
+.frame {
+    background: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 100%; 
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.frame:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Frame labels */
+.frame-label {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #fff; 
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive: on very small screens, stack all frames */
+@media (max-width: 350px) {
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
 }
