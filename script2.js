@@ -23,7 +23,7 @@ function openGift(choice) {
         `;
     } else if (choice === 2) {
         result.innerHTML = `
-            <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/photo.png" class="gift-img">
+            <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/IMG_20260319_172645.jpg" class="gift-img">
             <p>Hehe got you 😝</p>
         `;
     }
