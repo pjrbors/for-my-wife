@@ -3,18 +3,18 @@ body {
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* stack GIF and frames vertically */
+    flex-direction: column;
     align-items: center;
     background: linear-gradient(135deg, #ffa4bb, #81a6ee);
     font-family: Arial, sans-serif;
 }
 
-/* GIF container at top as a square box */
+/* GIF container at top */
 .gif-container {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 150px;   /* same as frames */
-    height: 150px;  /* same as frames */
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,18 +23,67 @@ body {
 .gif-container img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* fit inside square without cropping */
+    object-fit: contain;
     border-radius: 15px;
 }
 
-/* Grid container for frames */
+/* Grid container */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns for first row */
-    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     width: 90%;
     max-width: 400px;
+}
+
+/* Wrapper for frame + label */
+.frame-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Frame box */
+.frame {
+    background: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.frame:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Image inside frame */
+.frame-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Labels */
+.frame-label {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive (very small screens) */
+@media (max-width: 350px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}    max-width: 400px;
 }
 
 /* Wrapper for frame + label */
