@@ -144,10 +144,23 @@ body {
 }
 
 .gift-img {
-    width: 300px;
-    height: 300px;
+    width: 250px;       /* bigger for mobile */
+    max-width: 90%;
+    height: auto;       /* maintain aspect ratio */
     object-fit: contain;
     border-radius: 10px;
+}
+
+/* Gift title and message */
+.gift-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.gift-message {
+    font-size: 16px;
+    margin: 0;
 }
 
 /* Button inside popup */
