@@ -18,7 +18,7 @@ function openGift(choice) {
 
     if (choice === 1) {
         result.innerHTML = `
-            <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/flower.png" class="gift-img">
+            <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/1773910831618.png" class="gift-img">
             <p>For you 🌸</p>
         `;
     } else if (choice === 2) {
