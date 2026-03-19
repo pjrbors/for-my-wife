@@ -79,7 +79,7 @@ body {
     font-weight: bold;
 }
 
-/* Popup (hidden by default, will animate) */
+/* Popup */
 .popup {
     position: fixed;
     top: 0;
@@ -96,7 +96,7 @@ body {
     transition: opacity 0.3s ease;
 }
 
-/* When popup is active */
+/* Show popup */
 .popup.show {
     opacity: 1;
     visibility: visible;
