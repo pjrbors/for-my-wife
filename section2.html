@@ -9,32 +9,68 @@
 
 <body>
 
-<!-- GIF at the top as a square box -->
+<!-- GIF at the top -->
 <div class="gif-container">
     <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUybjNoOWt3dXQ2cnlyMDE2eXNqNjJtcGM2a28xMG9pMmp5YjdtandxZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/fvN5KrNcKKUyX7hNIA/giphy.gif" alt="Cute GIF">
 </div>
 
 <div class="grid-container">
-  <!-- Love Note Frame -->
+
+  <!-- Love Note -->
   <div class="frame-wrapper">
     <div class="frame">
-        <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/4157874.png" alt="Envelope Icon" class="frame-icon">
+        <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/4157874.png" class="frame-icon">
     </div>
     <p class="frame-label">Love Note</p>
   </div>
 
-  <!-- Photo Frame -->
+  <!-- Photo -->
   <div class="frame-wrapper">
     <div class="frame">
-        <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/5904483.png" alt="Camera Icon" class="frame-icon">
+        <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/5904483.png" class="frame-icon">
     </div>
     <p class="frame-label">Photo</p>
   </div>
 
-  <!-- Surprise Frame -->
+  <!-- Surprise -->
+  <div class="frame-wrapper">
+    <div class="frame" onclick="openSurprise()">
+        <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/3787677.png" class="frame-icon">
+    </div>
+    <p class="frame-label">Surprise</p>
+  </div>
+
+  <!-- Birthday GIF -->
   <div class="frame-wrapper">
     <div class="frame">
-        <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/3787677.png" alt="Surprise Icon" class="frame-icon">
+        <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/happy-birthday-iccychan.gif" class="frame-icon">
+    </div>
+  </div>
+
+</div>
+
+<!-- Surprise Popup -->
+<div id="surprisePopup" class="popup">
+  <div class="popup-content">
+
+    <h2>Pick a gift</h2>
+
+    <div class="gift-container">
+      <div class="gift" onclick="openGift(1)">🎁</div>
+      <div class="gift" onclick="openGift(2)">🎁</div>
+    </div>
+
+    <div id="giftResult" class="gift-result"></div>
+
+    <button onclick="closeSurprise()">Close</button>
+
+  </div>
+</div>
+
+<script src="script2.js"></script>
+
+</body>
+</html>        <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/3787677.png" alt="Surprise Icon" class="frame-icon">
     </div>
     <p class="frame-label">Surprise</p>
   </div>
