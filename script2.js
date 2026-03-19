@@ -23,15 +23,15 @@ function openGift(choice) {
         // First gift: flower with title + message
         result.innerHTML = `
             <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/1773910831618.png" class="gift-img">
-            <p class="gift-title">Flowers for you</p>
-            <p class="gift-message">You brighten my day every day 🌸</p>
+            <p class="gift-title">Flowers for you 🌸</p>
+            <p class="gift-message">Just like this flower, my love for you keeps growing every day. May it always remind you of how special you are to me. — always yours, Peejay</p>
         `;
     } else if (choice === 2) {
         // Second gift: silly photo
         result.innerHTML = `
-            <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/photo.png" class="gift-img">
-            <p class="gift-title">Hehe got you</p>
-            <p class="gift-message">A little silly surprise 😝</p>
+            <img src="https://raw.githubusercontent.com/pjrbors/for-my-wife/main/IMG_20260319_172645.jpg" class="gift-img">
+            <p class="gift-title">Hehe gotcha 😛</p>
+            <p class="gift-message">Sorry na agad HAHAHHAHA</p>
         `;
     }
     }
